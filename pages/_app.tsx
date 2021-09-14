@@ -1,8 +1,12 @@
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, useColorMode } from '@chakra-ui/react'
+import type { AppProps } from 'next/app'
+import React from 'react'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
+  const { colorMode, toggleColorMode } = useColorMode()
+
   return (
-    <ChakraProvider resetCSS={true}>
+    <ChakraProvider resetCSS>
       <Component {...pageProps} />
     </ChakraProvider>
   )
