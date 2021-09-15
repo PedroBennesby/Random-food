@@ -6,12 +6,7 @@ const ThemeSwitcher: NextComponentType = () => {
   const { colorMode, toggleColorMode } = useColorMode()
 
   return (
-    <Container
-      display="flex"
-      justifyContent="center"
-      flexDirection="column"
-      alignItems="center"
-    >
+    <Container display="flex" justifyContent="center" alignItems="center">
       {colorMode === 'light' ? (
         <IconButton
           my={1}

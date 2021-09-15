@@ -13,6 +13,11 @@ const breakpoints = createBreakpoints({
   xl: '80em',
 })
 
-const theme = extendTheme({ config, breakpoints })
+const fonts = {
+  heading: 'Roboto',
+  body: 'Roboto',
+}
+
+const theme = extendTheme({ config, breakpoints, fonts })
 
 export default theme
